@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게임 흐름도</title>
+    <link rel="stylesheet" href="map.css" />
+  </head>
+  <body>
+    <div class="flowchart">
+      <!-- 시작 -->
+      <div class="node start" onclick="showRules('무작위 연예인 1명 맞추기!')">
+        <p>Start</p>
+        <p>인물 퀴즈</p>
+      </div>
+
+      <div
+        class="node"
+        onclick="showRules('한 개의 초성으로 3가지 단어 ex:ㄱㄱ 고기 곳간 건기')"
+      >
+        <p>초성 퀴즈</p>
+      </div>
+
+      <div
+        class="node"
+        onclick="showRules('가수, 제목 모두 3문제를 맞혀야 성공!')"
+      >
+        <p>노래 듣고 맞히기</p>
+      </div>
+
+      <div class="node" onclick="showRules('신발 던지기: 1개만 넣어도 성공!')">
+        <p>신발 던지기</p>
+      </div>
+
+      <div class="node" onclick="showRules('물병 던지기 규칙: 무제한 도전')">
+        <p>물병 던지기</p>
+      </div>
+
+      <div
+        class="node"
+        onclick="showRules('퍼즐 완성 후 꼭 타이머 멈추기(중요!!)')"
+      >
+        <p>그림 퍼즐 맞추기</p>
+      </div>
+
+      <div
+        class="node finish"
+        onclick="showRules('축하합니다! 도장 받으세요!')"
+      >
+        <p>Finish</p>
+        <p>도장 받기</p>
+      </div>
+      <a href="explain.html">맵 페이지로 돌아가기</a>
+    </div>
+
+    <!-- 모달 팝업 -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <p id="modal-text"></p>
+      </div>
+    </div>
+
+    <script src="map.js"></script>
+  </body>
+</html>
